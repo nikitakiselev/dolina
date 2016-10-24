@@ -28,8 +28,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^3.9.1",
     "gulp-clean-css": "^2.0.13",
     "gulp-header": "^1.8.8",
+    "gulp-serve": "^1.4.0",
     "gulp-util": "^3.0.7"
   }
 }

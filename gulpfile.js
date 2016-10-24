@@ -29,9 +29,7 @@ let banner = `
 let config = {
     production: !!util.env.production,
     scripts: {
-        minify: {
-
-        }
+        minify: {}
     }
 };
 
@@ -62,6 +60,10 @@ gulp.task('watch', ['build', 'serve'], () => {
     watch(['./src/js/**/*.js'], () => {
         gulp.run('scripts');
     });
+
+    watch(['./src/fonts/**/*'], () => {
+        gulp.run('copy');
+    });
 });
 
 gulp.task('less', () => {
@@ -86,18 +88,19 @@ gulp.task('html', function() {
         .pipe(livereload());
 });
 
-gulp.task('image', () =>
+gulp.task('image', () => {
     gulp.src('./src/images/**/*')
         .pipe(changed('dist/images'))
         .pipe(imagemin())
         .pipe(gulp.dest('dist/images'))
         .pipe(notify("Images minified!"))
         .pipe(livereload())
-);
+});
 
 gulp.task('sprites', function () {
-    var spriteData = gulp.src('icons/*.png').pipe(spritesmith({
-        imgName: 'images/sprite.png',
+    var spriteData = gulp.src('./src/icons/*.png').pipe(spritesmith({
+        imgName: './src/images/sprite.png',
+        imgPath: '/images/sprite.png',
         cssName: './src/less/Components/Sprites.less',
         cssTemplate: 'less.template.handlebars'
     }));
@@ -120,8 +123,14 @@ gulp.task('scripts', () => {
         .pipe(gulp.dest('dist/js'));
 });
 
+gulp.task('copy', () => {
+    gulp.src('./src/fonts/**/*')
+        .pipe(changed('./dist/fonts'))
+        .pipe(gulp.dest('./dist/fonts'));
+});
+
 gulp.task('build', function () {
-    gulp.start(['html', 'sprites', 'image', 'less', 'scripts']);
+    gulp.start(['html', 'sprites', 'image', 'less', 'scripts', 'copy']);
 });
 
 gulp.task('default', function () {

@@ -1,0 +1,194 @@
+/*
+LESS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: @icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+@icon-home: x y offset_x offset_y width height total_width total_height image_path name;
+
+At the bottom of this section, we provide information about the spritesheet itself
+@spritesheet: width height image @spritesheet-sprites;
+*/
+@facebook-hover-name: facebook-hover;
+@facebook-hover-x: 104px;
+@facebook-hover-y: 0px;
+@facebook-hover-offset-x: -104px;
+@facebook-hover-offset-y: 0px;
+@facebook-hover-width: 51px;
+@facebook-hover-height: 51px;
+@facebook-hover-total-width: 205px;
+@facebook-hover-total-height: 152px;
+@facebook-hover-image: '/images/sprite.png';
+@facebook-hover: 104px 0px -104px 0px 51px 51px 205px 152px '/images/sprite.png' facebook-hover;
+@facebook-name: facebook;
+@facebook-x: 104px;
+@facebook-y: 51px;
+@facebook-offset-x: -104px;
+@facebook-offset-y: -51px;
+@facebook-width: 51px;
+@facebook-height: 51px;
+@facebook-total-width: 205px;
+@facebook-total-height: 152px;
+@facebook-image: '/images/sprite.png';
+@facebook: 104px 51px -104px -51px 51px 51px 205px 152px '/images/sprite.png' facebook;
+@instagram-hover-name: instagram-hover;
+@instagram-hover-x: 155px;
+@instagram-hover-y: 0px;
+@instagram-hover-offset-x: -155px;
+@instagram-hover-offset-y: 0px;
+@instagram-hover-width: 50px;
+@instagram-hover-height: 50px;
+@instagram-hover-total-width: 205px;
+@instagram-hover-total-height: 152px;
+@instagram-hover-image: '/images/sprite.png';
+@instagram-hover: 155px 0px -155px 0px 50px 50px 205px 152px '/images/sprite.png' instagram-hover;
+@instagram-name: instagram;
+@instagram-x: 100px;
+@instagram-y: 102px;
+@instagram-offset-x: -100px;
+@instagram-offset-y: -102px;
+@instagram-width: 50px;
+@instagram-height: 50px;
+@instagram-total-width: 205px;
+@instagram-total-height: 152px;
+@instagram-image: '/images/sprite.png';
+@instagram: 100px 102px -100px -102px 50px 50px 205px 152px '/images/sprite.png' instagram;
+@phone-name: phone;
+@phone-x: 50px;
+@phone-y: 102px;
+@phone-offset-x: -50px;
+@phone-offset-y: -102px;
+@phone-width: 50px;
+@phone-height: 50px;
+@phone-total-width: 205px;
+@phone-total-height: 152px;
+@phone-image: '/images/sprite.png';
+@phone: 50px 102px -50px -102px 50px 50px 205px 152px '/images/sprite.png' phone;
+@star-hover-name: star-hover;
+@star-hover-x: 155px;
+@star-hover-y: 50px;
+@star-hover-offset-x: -155px;
+@star-hover-offset-y: -50px;
+@star-hover-width: 50px;
+@star-hover-height: 50px;
+@star-hover-total-width: 205px;
+@star-hover-total-height: 152px;
+@star-hover-image: '/images/sprite.png';
+@star-hover: 155px 50px -155px -50px 50px 50px 205px 152px '/images/sprite.png' star-hover;
+@star-name: star;
+@star-x: 0px;
+@star-y: 102px;
+@star-offset-x: 0px;
+@star-offset-y: -102px;
+@star-width: 50px;
+@star-height: 50px;
+@star-total-width: 205px;
+@star-total-height: 152px;
+@star-image: '/images/sprite.png';
+@star: 0px 102px 0px -102px 50px 50px 205px 152px '/images/sprite.png' star;
+@vkontakte-hover-name: vkontakte-hover;
+@vkontakte-hover-x: 52px;
+@vkontakte-hover-y: 51px;
+@vkontakte-hover-offset-x: -52px;
+@vkontakte-hover-offset-y: -51px;
+@vkontakte-hover-width: 52px;
+@vkontakte-hover-height: 51px;
+@vkontakte-hover-total-width: 205px;
+@vkontakte-hover-total-height: 152px;
+@vkontakte-hover-image: '/images/sprite.png';
+@vkontakte-hover: 52px 51px -52px -51px 52px 51px 205px 152px '/images/sprite.png' vkontakte-hover;
+@vkontakte-name: vkontakte;
+@vkontakte-x: 0px;
+@vkontakte-y: 51px;
+@vkontakte-offset-x: 0px;
+@vkontakte-offset-y: -51px;
+@vkontakte-width: 52px;
+@vkontakte-height: 51px;
+@vkontakte-total-width: 205px;
+@vkontakte-total-height: 152px;
+@vkontakte-image: '/images/sprite.png';
+@vkontakte: 0px 51px 0px -51px 52px 51px 205px 152px '/images/sprite.png' vkontakte;
+@youtube-hover-name: youtube-hover;
+@youtube-hover-x: 52px;
+@youtube-hover-y: 0px;
+@youtube-hover-offset-x: -52px;
+@youtube-hover-offset-y: 0px;
+@youtube-hover-width: 52px;
+@youtube-hover-height: 51px;
+@youtube-hover-total-width: 205px;
+@youtube-hover-total-height: 152px;
+@youtube-hover-image: '/images/sprite.png';
+@youtube-hover: 52px 0px -52px 0px 52px 51px 205px 152px '/images/sprite.png' youtube-hover;
+@youtube-name: youtube;
+@youtube-x: 0px;
+@youtube-y: 0px;
+@youtube-offset-x: 0px;
+@youtube-offset-y: 0px;
+@youtube-width: 52px;
+@youtube-height: 51px;
+@youtube-total-width: 205px;
+@youtube-total-height: 152px;
+@youtube-image: '/images/sprite.png';
+@youtube: 0px 0px 0px 0px 52px 51px 205px 152px '/images/sprite.png' youtube;
+@spritesheet-width: 205px;
+@spritesheet-height: 152px;
+@spritesheet-image: '/images/sprite.png';
+@spritesheet-sprites: @facebook-hover @facebook @instagram-hover @instagram @phone @star-hover @star @vkontakte-hover @vkontakte @youtube-hover @youtube;
+@spritesheet: 205px 152px '/images/sprite.png' @spritesheet-sprites;
+
+/*
+The provided classes are intended to be used with the array-like variables
+
+.icon-home {
+  .sprite-width(@icon-home);
+}
+.icon-email {
+  .sprite(@icon-email);
+}
+*/
+.sprite-width(@sprite) {
+  width: extract(@sprite, 5);
+}
+
+.sprite-height(@sprite) {
+  height: extract(@sprite, 6);
+}
+
+.sprite-position(@sprite) {
+  @sprite-offset-x: extract(@sprite, 3);
+  @sprite-offset-y: extract(@sprite, 4);
+  background-position: @sprite-offset-x @sprite-offset-y;
+}
+
+.sprite-image(@sprite) {
+  @sprite-image: extract(@sprite, 9);
+  @sprite-image-bare: ~`"@{sprite-image}".slice(1, -1)`;
+  background-image: url(@sprite-image-bare);
+}
+
+.sprite(@sprite) {
+  .sprite-image(@sprite);
+  .sprite-position(@sprite);
+  .sprite-width(@sprite);
+  .sprite-height(@sprite);
+}
+
+/*
+The `.sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of LESS
+
+This must be run when you have at least 2 sprites.
+  If run with a single sprite, then there will be reference errors.
+
+.sprites(@spritesheet-sprites);
+*/
+.sprites(@sprites, @i: 1) when (@i <= length(@sprites)) {
+  @sprite: extract(@sprites, @i);
+  @sprite-name: extract(@sprite, 10);
+  .@{sprite-name} {
+    .sprite(@sprite);
+  }
+  .sprites(@sprites, @i + 1);
+}

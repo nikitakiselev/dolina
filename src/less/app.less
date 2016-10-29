@@ -1,3 +1,5 @@
+@container-width: 1262px;
+
 @import "Components/Reset";
 @import "Components/Mixins";
 @import "Components/Helpers";
@@ -8,9 +10,14 @@
 @import "Components/Hero";
 @import "Components/SocialLinks";
 @import "Components/Menu";
+@import "Components/Widgets";
+
+body {
+    min-width: @container-width;
+}
 
 .container {
-    width: 1262px;
+    width: @container-width;
     position: relative;
     margin: 0 auto;
 }

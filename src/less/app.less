@@ -1,4 +1,5 @@
 @container-width: 1262px;
+@container-inner-width: 1232px;
 
 @import "Components/Reset";
 @import "Components/Mixins";
@@ -14,9 +15,16 @@
 @import "Components/Actions";
 @import "Components/HowToBuy";
 @import "Components/Advantages";
+@import "Components/News";
 
 .container {
     width: @container-width;
+    position: relative;
+    margin: 0 auto;
+}
+
+.container-inner {
+    width: @container-inner-width;
     position: relative;
     margin: 0 auto;
 }

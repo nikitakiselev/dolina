@@ -98,7 +98,7 @@ gulp.task('image', () => {
 });
 
 gulp.task('sprites', function () {
-    var spriteData = gulp.src('./src/icons/*.png').pipe(spritesmith({
+    var spriteData = gulp.src('./src/icons/*.*').pipe(spritesmith({
         imgName: './src/images/sprite.png',
         imgPath: '/images/sprite.png',
         cssName: './src/less/Components/Sprites.less',

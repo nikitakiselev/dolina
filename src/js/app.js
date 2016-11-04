@@ -6,3 +6,13 @@ $("#carousel").owlCarousel({
     pagination: false,
     responsive: false
 });
+
+AjaxForm.prototype.flash = (message, status) => {
+    swal({
+        title: status === 'error' ? 'Error' : 'Information',
+        text: message,
+        type: status
+    });
+};
+
+let callbackForm = new AjaxForm('#callback-form');

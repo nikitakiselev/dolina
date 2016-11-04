@@ -64,6 +64,10 @@ gulp.task('watch', ['build', 'serve'], () => {
     watch(['./src/fonts/**/*'], () => {
         gulp.run('copy');
     });
+
+    watch(['./src/vendor/**/*'], () => {
+        gulp.run('copy');
+    });
 });
 
 gulp.task('less', () => {

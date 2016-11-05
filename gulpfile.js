@@ -116,12 +116,12 @@ gulp.task('sprites', function () {
 });
 
 gulp.task('scripts', () => {
-    return gulp.src('./src/js/app.js')
+    gulp.src('./src/js/app.js')
         .pipe(config.production ? util.noop() : sourcemaps.init())
+        .pipe(config.production ? minifyJs(config.scripts.minify) : util.noop())
         .pipe(babel({
             presets: ['es2015']
         }))
-        .pipe(config.production ? minifyJs(config.scripts.minify) : util.noop())
         .pipe(header(banner))
         .pipe(config.production ? util.noop() : sourcemaps.write('./maps'))
         .pipe(gulp.dest('dist/js'));

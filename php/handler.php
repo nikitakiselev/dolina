@@ -23,13 +23,7 @@ $siteName = 'Your site name';
 $mailFrom = ['from@mail.com', $siteName];
 $mailTo = 'to@mail.com';
 
-$mailer = new Mailer($mailFrom, $mailTo, [
-    'smtp_host' => 'mailtrap.io',
-    'smtp_username' => '293508219ba90d1a9',
-    'smtp_password' => 'c761c5574a6dac',
-    'smtp_port' => 2525,
-]);
-$mailer->useSmtp();
+$mailer = new Mailer($mailFrom, $mailTo);
 $mailer->setSubject("'Уведомление с сайта {$siteName}'");
 
 /**

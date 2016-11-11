@@ -4,6 +4,19 @@
 
 .form-group {
     margin-bottom: 8px;
+    position: relative;
+
+    &.has-error {
+        color: red;
+
+        .form-input {
+            border-color: red;
+        }
+    }
+
+    .help-block {
+        margin-top: 6px;
+    }
 }
 
 .form-input {

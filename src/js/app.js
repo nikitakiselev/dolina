@@ -26,6 +26,10 @@ AjaxForm.prototype.flash = (title, message, status = 'success', html = false) =>
     });
 };
 
+AjaxForm.prototype.error = function() {
+    this.flash('Ошибка', this.config.lang.unknownError, 'error');
+};
+
 AjaxForm.prototype.onSubmited = function (response) {
     this.reset();
 
